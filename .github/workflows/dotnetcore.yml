@@ -23,12 +23,22 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore
+    - name: Doxygen generation
+      uses: mattnotmitt/doxygen-action@v1.1.0
+      with:
+        doxyfile-path: ./DoxyConf
+        working-directory: .
+    - name: Publish Doxygen doc
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        publish_dir: ./DocTxDev  
     - name: Pack
       run: dotnet pack --configuration Release --no-restore
     - name: Publish
       uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
       with:
-        nupkg-path:  './Dummy/bin/Release/Dummy.*.nupkg'
+        nupkg-path:  './*/bin/Release/*.nupkg'
         repo-owner:  'dbissari'
         gh-user:  'dbissari'
         token:  ${{secrets.GITHUB_TOKEN}}
