@@ -29,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: Dummy.1.0.0.nupkg
-        path: DummyRepo/bin/Release
+        path: Dummy/bin/Release
