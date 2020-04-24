@@ -21,6 +21,7 @@ namespace Dummy.Tests
         [InlineData(2, 2)]
         [InlineData(3, 6)]
         [InlineData(4, 24)]
+        [InlineData(4, 25)]
         public void Factorial_ReturnsTheRightAnswers(int n, int result)
         {
             Assert.Equal(result, Math.Factorial(n));
