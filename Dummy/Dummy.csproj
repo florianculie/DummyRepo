@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Dummy</PackageId>
-    <Version>1.0.0</Version>
+    <Version>0.1.0</Version>
     <Authors>Déromba B.</Authors>
     <Company>DBis</Company>
     <PackageDescription>This is a dummy package.</PackageDescription>
