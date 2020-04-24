@@ -29,12 +29,11 @@ SEARCHENGINE           	= YES
 GENERATE_LATEX         	= NO
 ENABLE_PREPROCESSING   	= NO
 ################################## Project specific conf ###########################################
-PROJECT_NAME     		= "#DevName#"
-PROJECT_NUMBER			= #iMajor#.#iMinor#.#iRelease#.#iRevision#
+PROJECT_NAME     		= Dummy
+PROJECT_NUMBER			= 0.1.0
 PROJECT_BRIEF			= ""
 #PROJECT_LOGO			= "logo.png"
 OUTPUT_DIRECTORY		= "DocTxDev"
-WARN_LOGFILE           	= log.doxygen_txdev_warning.txt
 INPUT                  	=
 EXCLUDE                	= "DocTxDev" "DocExtDev"
 EXCLUDE_PATTERNS       	= */*Tests/* */obj/* *AssemblyInfo.cs
