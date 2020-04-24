@@ -28,4 +28,4 @@ jobs:
     - name: Publish
       env:
         API_KEY: ${{ secrets.GITHUB_TOKEN }}
-      run: dotnet nuget push "Dummy/bin/Release/Dummy.1.0.0.nupkg" --source "github" --api-key "$env:API_KEY"
+      run: dotnet nuget push Dummy/bin/Release/Dummy.1.0.0.nupkg --source github --api-key $env:API_KEY
