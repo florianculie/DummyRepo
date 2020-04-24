@@ -32,7 +32,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{secrets.GITHUB_TOKEN}}
-        publish_dir: ./DocTxDev  
+        publish_dir: ./DocTxDev/html
     - name: Pack
       run: dotnet pack --configuration Release --no-restore
     - name: Publish
