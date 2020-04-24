@@ -28,4 +28,4 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: DummyRepo/bin/Release
+        path: DummyRepo/bin/Release
