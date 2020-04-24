@@ -26,6 +26,9 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release --no-restore
     - name: Publish
-      env:
-        API_KEY: ${{ secrets.GITHUB_TOKEN }}
-      run: dotnet nuget push Dummy/bin/Release/Dummy.1.0.0.nupkg --source github --api-key $env:API_KEY
+      uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
+      with:
+        nupkg-path:  './Dummy/bin/Release/Dummy.*.nupkg'
+        repo-owner:  'dbissari'
+        gh-user:  'dbissari'
+        token:  ${{secrets.GITHUB_TOKEN}}
