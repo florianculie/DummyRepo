@@ -11,6 +11,7 @@ namespace Dummy.Tests
         [InlineData(3, 1)]
         [InlineData(1, 4)]
         [InlineData(5, 1)]
+        [InlineData(5, 2)]
         public void Add_AddsTwoNumbers(int a, int b)
         {
             Assert.Equal(a + b, Math.Add(a, b));
